@@ -15,6 +15,8 @@ The two platforms have independent manifests and theme resources. No application
 
 ## Install
 
+VS Code Marketplace: [Protocol Blueprint Light](https://marketplace.visualstudio.com/items?itemName=suremotoo.protocol-blueprint-light). VS Code version **1.1.1** adds actual screenshots and marketplace presentation; IDEA remains **1.1.0**.
+
 Download the platform-specific package from [Releases](https://github.com/Suremotoo/protocol-blueprint-light/releases).
 
 JetBrains Marketplace: [Protocol Blueprint Light](https://plugins.jetbrains.com/plugin/35816-protocol-blueprint-light). First release submitted for moderation on 2026-11-05; public installation becomes available after approval.

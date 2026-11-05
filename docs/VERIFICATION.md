@@ -33,3 +33,10 @@
 - IDEA 增加 Marketplace 描述、更新说明、Vendor 链接及原创 SVG 图标。重新通过本机 IDEA 原生 headless 检查，包含 Islands 继承、字体、语法和 21 个 Blame 背景。
 - Python 构建 IDEA ZIP；固定 @vscode/vsce 3.9.2 构建 VSIX。dist/ 为生成目录，不进入 Git。
 - GitHub v1.1.0 Release 包含 IDEA ZIP、VSIX、可选 ICLS 和 SHA256SUMS.txt。商城插件 ID 为 35816，首次上传已提交审核；这不代表已通过审核或已公开。
+
+## VS Code 商城发布准备 · 1.1.1 · 2026-11-05
+
+- 三张作者提供的实际 VS Code 截图已加入 vscode/images/，与原图逐字节一致；图标和截图已检查。
+- VSIX 包含图标、三张截图、CHANGELOG、README 和原有主题资源，版本 1.1.1，publisher 为 suremotoo；主题配色和字体预设不变。
+- @vscode/vsce 3.9.2 打包成功；隔离扩展目录安装成功。
+- 商城后台接收扩展并显示 Public / Verifying；最终可用性以商城校验结果为准。

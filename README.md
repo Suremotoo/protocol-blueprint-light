@@ -17,6 +17,8 @@ The two platforms have independent manifests and theme resources. No application
 
 Download the platform-specific package from [Releases](https://github.com/Suremotoo/protocol-blueprint-light/releases).
 
+JetBrains Marketplace: [Protocol Blueprint Light](https://plugins.jetbrains.com/plugin/35816-protocol-blueprint-light). First release submitted for moderation on 2026-11-05; public installation becomes available after approval.
+
 - **IDEA:** Plugins → Install Plugin from Disk → select the IDEA ZIP. Appearance → Theme → **Protocol Blueprint Light**. Editor → Color Scheme → **Protocol Blueprint Light 1.1**. Requires Islands Light / build 253+.
 - **VS Code:** Extensions: Install from VSIX → select the VSIX. Preferences: Color Theme → **Protocol Blueprint Light**.
 

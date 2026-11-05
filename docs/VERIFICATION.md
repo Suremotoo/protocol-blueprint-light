@@ -9,7 +9,7 @@
 - TextMate / semanticTokenColors 已包含；未对每种语言插件逐一验证。
 - IDEA 编辑器颜色与属性、VS Code JSON 无重复键；安装包资源路径与插件描述一致。
 - 两个安装包均为声明式主题资源，不带运行时代码、网站素材或字体文件。
-- preview-v1.1.png 为使用实际色值生成的前后对照示意，已检查图像；不是实际 IDE 截图。
+- assets/syntax-and-blame-comparison.png 为使用实际色值生成的前后对照示意，已检查图像；不是实际 IDE 截图。
 
 主要语法前景对纸面背景 #FDFDFE 的 WCAG 对比度如下（非全 UI 无障碍认证）：
 
@@ -26,3 +26,10 @@
 | property | `#0B7185` | 5.56:1 |
 | punctuation | `#65718A` | 4.82:1 |
 | operator | `#45546D` | 7.53:1 |
+
+## 发布整理检查 · 2026-11-05
+
+- IDEA 和 VS Code 源码分目录维护，单独的 manifest、资源和 README；通用构建入口为 scripts/build.py。
+- IDEA 增加 Marketplace 描述、更新说明、Vendor 链接及原创 SVG 图标。重新通过本机 IDEA 原生 headless 检查，包含 Islands 继承、字体、语法和 21 个 Blame 背景。
+- Python 构建 IDEA ZIP；固定 @vscode/vsce 3.9.2 构建 VSIX。dist/ 为生成目录，不进入 Git。
+- GitHub v1.1.0 Release 包含 IDEA ZIP、VSIX、可选 ICLS 和 SHA256SUMS.txt。商城插件 ID 为 35816，首次上传已提交审核；这不代表已通过审核或已公开。

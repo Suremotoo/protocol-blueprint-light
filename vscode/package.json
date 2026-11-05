@@ -1,0 +1,47 @@
+{
+  "name": "protocol-blueprint-light",
+  "displayName": "Protocol Blueprint Light",
+  "description": "White paper, cobalt ink and fine blue borders. Complete blueprint-inspired light workbench theme.",
+  "version": "1.1.0",
+  "publisher": "suremotoo",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "light",
+    "blueprint",
+    "blue",
+    "protocol"
+  ],
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Protocol Blueprint Light",
+        "uiTheme": "vs",
+        "path": "./themes/protocol-blueprint-light-color-theme.json"
+      }
+    ],
+    "configurationDefaults": {
+      "editor.fontFamily": "'Fantasque Sans Mono', monospace",
+      "editor.fontSize": 13,
+      "editor.lineHeight": 1.2,
+      "editor.fontLigatures": true,
+      "terminal.integrated.fontFamily": "Fantasque Sans Mono",
+      "terminal.integrated.fontSize": 13,
+      "terminal.integrated.lineHeight": 1.2
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Suremotoo/protocol-blueprint-light.git",
+    "directory": "vscode"
+  },
+  "homepage": "https://github.com/Suremotoo/protocol-blueprint-light",
+  "bugs": {
+    "url": "https://github.com/Suremotoo/protocol-blueprint-light/issues"
+  }
+}

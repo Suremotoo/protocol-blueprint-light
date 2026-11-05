@@ -1,0 +1,21 @@
+{
+  "background": "#FDFDFE",
+  "sidebar": "#F3F6FD",
+  "shell": "#E8EEFC",
+  "uiText": "#0B2B86",
+  "accent": "#0032A0",
+  "text": "#293447",
+  "comment": "#65718A",
+  "type": "#0753A6",
+  "function": "#7040C8",
+  "string": "#9A6500",
+  "number": "#9A6500",
+  "parameter": "#A13E5C",
+  "border": "#BCCAE6",
+  "keyword": "#087D52",
+  "property": "#0B7185",
+  "punctuation": "#65718A",
+  "operator": "#45546D",
+  "blame": "#526581",
+  "blameLatest": "#0032A0"
+}

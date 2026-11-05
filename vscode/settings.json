@@ -1,0 +1,10 @@
+{
+  "workbench.colorTheme": "Protocol Blueprint Light",
+  "editor.fontFamily": "'Fantasque Sans Mono', monospace",
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.2,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "Fantasque Sans Mono",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1.2
+}

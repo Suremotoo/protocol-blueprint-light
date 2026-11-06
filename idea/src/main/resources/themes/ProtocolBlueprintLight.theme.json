@@ -49,7 +49,7 @@
     "blue-130": "#9DB5E6",
     "blue-120": "#88BDE6",
     "text-default": "#0B2B86",
-    "editor-text": "#293447",
+    "editor-text": "#253247",
     "text-muted": "#4A66A4",
     "text-secondary": "#5A73A8",
     "text-disabled": "#8495B2",
@@ -165,7 +165,7 @@
     },
     "Editor": {
       "background": "canvas",
-      "foreground": "#293447"
+      "foreground": "#253247"
     },
     "StatusBar": {
       "background": "status",

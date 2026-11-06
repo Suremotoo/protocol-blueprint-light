@@ -1,19 +1,20 @@
 <idea-plugin>
   <id>local.suremotoo.protocol.blueprint.light</id>
   <name>Protocol Blueprint Light</name>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <vendor url="https://github.com/Suremotoo">Suremotoo</vendor>
   <description><![CDATA[
     <p>Protocol Blueprint Light is a complete light theme inspired by engineering blueprints: near-white paper, cobalt-blue controls, fine borders, and softly tinted tool windows. Built on Islands Light, it styles the IDE interface as well as the editor.</p>
-    <ul><li>Distinct green keywords, amber strings and numbers, purple methods, blue types, and slate comments.</li>
+    <ul><li>Distinct Java modifier, declaration, primitive-type and control-flow colors; deeper strings, numbers, methods, types and comments.</li>
     <li>Readable Git Blame author and date annotations, including the latest commit.</li>
     <li>Editor and console presets: Fantasque Sans Mono, size 13, line spacing 1.2, and ligatures. Install the font separately; existing font overrides take precedence.</li></ul>
-    <p>Requires an IDE with Islands Light (build 253 or newer). Select Protocol Blueprint Light under Appearance, and Protocol Blueprint Light 1.1 under Editor / Color Scheme.</p>
+    <p>Requires an IDE with Islands Light (build 253 or newer). Select Protocol Blueprint Light under Appearance, and Protocol Blueprint Light under Editor / Color Scheme.</p>
     <p>Source code and the companion VS Code theme: <a href="https://github.com/Suremotoo/protocol-blueprint-light">GitHub</a>. Licensed under MIT.</p>
   ]]></description>
-  <change-notes><![CDATA[<p>1.1.0: clearer syntax categories and declaration emphasis; corrected Git Blame foregrounds and added five light-blue annotation background anchors. Fantasque Sans Mono 13 and line spacing 1.2 presets.</p>]]></change-notes>
+  <change-notes><![CDATA[<p>1.1.1: distinct adjacent Java keyword, return-type and method colors; context-aware modifier chains, generic arguments and brackets; blue-gray parameters and import/package paths. Stable editor scheme name: Protocol Blueprint Light. Original Islands backgrounds and Fantasque Sans Mono 13 / 1.2 presets retained.</p>]]></change-notes>
   <idea-version since-build="253"/>
   <depends>com.intellij.modules.platform</depends>
+  <depends optional="true" config-file="java-support.xml">com.intellij.java</depends>
   <extensions defaultExtensionNs="com.intellij">
     <themeProvider id="local.suremotoo.protocol.blueprint.light" path="/themes/ProtocolBlueprintLight.theme.json" targetUi="islands"/>
   </extensions>

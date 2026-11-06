@@ -2,7 +2,7 @@
   "name": "protocol-blueprint-light",
   "displayName": "Protocol Blueprint Light",
   "description": "White paper, cobalt ink and fine blue borders. Complete blueprint-inspired light workbench theme.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "suremotoo",
   "engines": {
     "vscode": "^1.85.0"
@@ -35,8 +35,20 @@
       "editor.fontLigatures": true,
       "terminal.integrated.fontFamily": "Fantasque Sans Mono",
       "terminal.integrated.fontSize": 13,
-      "terminal.integrated.lineHeight": 1.2
-    }
+      "terminal.integrated.lineHeight": 1.2,
+      "[java]": {
+        "editor.semanticHighlighting.enabled": false
+      }
+    },
+    "grammars": [
+      {
+        "scopeName": "protocol.java.modifier-chains",
+        "path": "./syntaxes/java-modifier-chains.tmLanguage.json",
+        "injectTo": [
+          "source.java"
+        ]
+      }
+    ]
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,5 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator language="JAVA" implementationClass="local.suremotoo.protocol.ProtocolJavaKeywordAnnotator"/>
+  </extensions>
+</idea-plugin>

@@ -11,7 +11,7 @@
     "window.activeBorder": "#BCCAE6",
     "window.inactiveBorder": "#DDE5F5",
     "editor.background": "#FDFDFE",
-    "editor.foreground": "#293447",
+    "editor.foreground": "#253247",
     "editor.selectionBackground": "#D0DEF8",
     "editor.inactiveSelectionBackground": "#E2E9F5",
     "editor.selectionHighlightBackground": "#D0DEF866",
@@ -179,7 +179,7 @@
     "textBlockQuote.background": "#F3F6FD",
     "textBlockQuote.border": "#BCCAE6",
     "terminal.background": "#FDFDFE",
-    "terminal.foreground": "#20365B",
+    "terminal.foreground": "#253247",
     "terminal.selectionBackground": "#D0DEF8",
     "terminal.border": "#BCCAE6",
     "terminalCursor.foreground": "#0032A0",
@@ -207,7 +207,13 @@
     "gitlens.gutterBackgroundColor": "#F3F6FD",
     "gitlens.gutterUncommittedForegroundColor": "#9A6500",
     "gitlens.lineHighlightBackgroundColor": "#D0DEF866",
-    "editorCodeLens.foreground": "#65718A"
+    "editorCodeLens.foreground": "#53647D",
+    "editorBracketHighlight.foreground1": "#65718A",
+    "editorBracketHighlight.foreground2": "#65718A",
+    "editorBracketHighlight.foreground3": "#65718A",
+    "editorBracketHighlight.foreground4": "#65718A",
+    "editorBracketHighlight.foreground5": "#65718A",
+    "editorBracketHighlight.foreground6": "#65718A"
   },
   "tokenColors": [
     {
@@ -217,7 +223,7 @@
         "punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#65718A",
+        "foreground": "#53647D",
         "fontStyle": ""
       }
     },
@@ -225,13 +231,11 @@
       "name": "Protocol keywords",
       "scope": [
         "keyword",
-        "storage",
-        "storage.type",
-        "storage.modifier"
+        "storage"
       ],
       "settings": {
-        "foreground": "#087D52",
-        "fontStyle": "bold"
+        "foreground": "#08754B",
+        "fontStyle": ""
       }
     },
     {
@@ -242,7 +246,7 @@
         "markup.inline.raw"
       ],
       "settings": {
-        "foreground": "#9A6500",
+        "foreground": "#946400",
         "fontStyle": ""
       }
     },
@@ -254,7 +258,7 @@
         "constant.character"
       ],
       "settings": {
-        "foreground": "#9A6500",
+        "foreground": "#91501D",
         "fontStyle": ""
       }
     },
@@ -267,7 +271,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#0753A6",
+        "foreground": "#185B95",
         "fontStyle": ""
       }
     },
@@ -279,7 +283,7 @@
         "variable.function"
       ],
       "settings": {
-        "foreground": "#7040C8",
+        "foreground": "#6842AD",
         "fontStyle": ""
       }
     },
@@ -290,7 +294,7 @@
         "meta.definition.variable"
       ],
       "settings": {
-        "foreground": "#293447",
+        "foreground": "#253247",
         "fontStyle": ""
       }
     },
@@ -300,7 +304,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "foreground": "#A13E5C",
+        "foreground": "#334C70",
         "fontStyle": ""
       }
     },
@@ -313,7 +317,7 @@
         "support.type.property-name"
       ],
       "settings": {
-        "foreground": "#0B7185",
+        "foreground": "#086574",
         "fontStyle": ""
       }
     },
@@ -333,7 +337,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "#0B7185",
+        "foreground": "#086574",
         "fontStyle": ""
       }
     },
@@ -343,7 +347,7 @@
         "punctuation"
       ],
       "settings": {
-        "foreground": "#65718A",
+        "foreground": "#53647D",
         "fontStyle": ""
       }
     },
@@ -353,7 +357,7 @@
         "keyword.operator"
       ],
       "settings": {
-        "foreground": "#45546D",
+        "foreground": "#3D4F6A",
         "fontStyle": ""
       }
     },
@@ -363,7 +367,7 @@
         "constant.character.escape"
       ],
       "settings": {
-        "foreground": "#0B7185",
+        "foreground": "#086574",
         "fontStyle": ""
       }
     },
@@ -375,7 +379,7 @@
       ],
       "settings": {
         "foreground": "#0032A0",
-        "fontStyle": "bold"
+        "fontStyle": ""
       }
     },
     {
@@ -438,38 +442,194 @@
         "foreground": "#C53046",
         "fontStyle": ""
       }
+    },
+    {
+      "name": "Access and storage modifiers",
+      "scope": [
+        "storage.modifier",
+        "keyword.other.import",
+        "keyword.other.package",
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.control.from",
+        "keyword.control.as"
+      ],
+      "settings": {
+        "foreground": "#28558B",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Type and function declaration words",
+      "scope": [
+        "storage.type.class",
+        "storage.type.interface",
+        "storage.type.enum",
+        "storage.type.function",
+        "storage.type.type",
+        "storage.type.namespace",
+        "storage.type.internaldeclaration",
+        "storage.modifier.class.java",
+        "storage.modifier.interface.java",
+        "storage.modifier.enum.java",
+        "storage.modifier.record.java"
+      ],
+      "settings": {
+        "foreground": "#08754B",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Primitive and return types",
+      "scope": [
+        "storage.type.primitive",
+        "storage.type.primitive.array",
+        "storage.type.numeric",
+        "support.type.primitive"
+      ],
+      "settings": {
+        "foreground": "#6842AD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java generic arguments",
+      "scope": [
+        "storage.type.generic.java"
+      ],
+      "settings": {
+        "foreground": "#08754B",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java generic brackets",
+      "scope": [
+        "punctuation.bracket.angle.java"
+      ],
+      "settings": {
+        "foreground": "#65718A",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java declaration words in native declaration context",
+      "scope": [
+        "meta.class.identifier.java storage.modifier.java",
+        "meta.record.identifier.java storage.modifier.java"
+      ],
+      "settings": {
+        "foreground": "#08754B",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java container and nominal types",
+      "scope": [
+        "storage.type.java",
+        "storage.type.object.array.java"
+      ],
+      "settings": {
+        "foreground": "#185B95",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java access and import keywords",
+      "scope": [
+        "storage.modifier.java",
+        "keyword.other.import.java",
+        "keyword.other.package.java"
+      ],
+      "settings": {
+        "foreground": "#946400",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java primitive return types",
+      "scope": [
+        "storage.type.primitive.java",
+        "storage.type.primitive.array.java"
+      ],
+      "settings": {
+        "foreground": "#185B95",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java package and import paths",
+      "scope": [
+        "storage.modifier.import.java",
+        "storage.modifier.package.java"
+      ],
+      "settings": {
+        "foreground": "#334C70",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java modifier chain green",
+      "scope": [
+        "storage.modifier.protocol.chain.green.java"
+      ],
+      "settings": {
+        "foreground": "#08754B",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java modifier chain violet",
+      "scope": [
+        "storage.modifier.protocol.chain.violet.java"
+      ],
+      "settings": {
+        "foreground": "#6842AD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Java modifier chain amber",
+      "scope": [
+        "storage.modifier.protocol.chain.amber.java"
+      ],
+      "settings": {
+        "foreground": "#946400",
+        "fontStyle": ""
+      }
     }
   ],
   "semanticTokenColors": {
-    "namespace": "#0753A6",
-    "type": "#0753A6",
-    "class": "#0753A6",
-    "interface": "#0753A6",
-    "enum": "#0753A6",
-    "typeParameter": "#0753A6",
-    "function": "#7040C8",
-    "method": "#7040C8",
-    "variable": "#293447",
-    "parameter": "#A13E5C",
-    "property": "#0B7185",
-    "enumMember": "#9A6500",
-    "variable.readonly": "#9A6500",
-    "keyword": {
-      "foreground": "#087D52",
-      "bold": true
-    },
-    "string": "#9A6500",
-    "number": "#9A6500",
-    "comment": "#65718A",
-    "decorator": "#0B7185",
-    "operator": "#45546D",
+    "namespace": "#185B95",
+    "type": "#185B95",
+    "class": "#185B95",
+    "interface": "#185B95",
+    "enum": "#185B95",
+    "typeParameter": "#08754B",
+    "function": "#6842AD",
+    "method": "#6842AD",
+    "variable": "#253247",
+    "parameter": "#334C70",
+    "property": "#086574",
+    "enumMember": "#91501D",
+    "variable.readonly": "#91501D",
+    "string": "#946400",
+    "number": "#91501D",
+    "comment": "#53647D",
+    "decorator": "#086574",
+    "operator": "#3D4F6A",
     "function.declaration": {
-      "foreground": "#7040C8",
-      "bold": true
+      "foreground": "#6842AD",
+      "bold": false
     },
     "method.declaration": {
-      "foreground": "#7040C8",
-      "bold": true
-    }
+      "foreground": "#6842AD",
+      "bold": false
+    },
+    "modifier": "#28558B",
+    "*.typeArgument:java": "#08754B",
+    "parameter:java": "#334C70",
+    "modifier:java": "#946400",
+    "namespace:java": "#334C70"
   }
 }

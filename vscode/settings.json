@@ -6,5 +6,8 @@
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "Fantasque Sans Mono",
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.lineHeight": 1.2
+  "terminal.integrated.lineHeight": 1.2,
+  "[java]": {
+    "editor.semanticHighlighting.enabled": false
+  }
 }

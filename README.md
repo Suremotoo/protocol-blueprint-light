@@ -1,55 +1,44 @@
 # Protocol Blueprint Light
 
-Complete light themes for **JetBrains IDEA** and **Visual Studio Code**, inspired by [Protocol Explorer](https://protocol-explorer-alpha.vercel.app/): near-white paper, cobalt-blue controls, fine borders, and distinct syntax colors.
+Complete light themes for **JetBrains IDEA** and **Visual Studio Code**. Near-white paper, cobalt-blue controls and syntax colors that distinguish neighboring roles.
 
-面向 IDEA 与 VS Code 的完整浅色主题。字体预设为 **Fantasque Sans Mono · 13 · line spacing 1.2**；字体需自行安装，已有用户设置优先。
+![Protocol Blueprint Light — light workbench and distinct Java syntax](assets/protocol-blueprint-light.png)
 
-## Platforms / 平台目录
-
-| Platform | Source | Installation / build |
-| --- | --- | --- |
-| JetBrains IDEA | [`idea/`](idea/) | [IDEA instructions](idea/README.md) |
-| Visual Studio Code | [`vscode/`](vscode/) | [VS Code instructions](vscode/README.md) |
-
-The two platforms have independent manifests and theme resources. No application source code, credentials, bundled fonts, or website artwork is included.
+Theme illustration using the actual palette; not an IDE screenshot. Font preset: **Fantasque Sans Mono · 13 · line spacing 1.2**. Install the font separately.
 
 ## Install
 
-VS Code Marketplace: [Protocol Blueprint Light](https://marketplace.visualstudio.com/items?itemName=suremotoo.protocol-blueprint-light). VS Code version **1.1.1** adds actual screenshots and marketplace presentation; IDEA remains **1.1.0**.
+| Platform | Marketplace | Version | Source |
+| --- | --- | --- | --- |
+| JetBrains IDEA | [Get the theme](https://plugins.jetbrains.com/plugin/35816-protocol-blueprint-light) | **1.1.1** | [idea/](idea/) |
+| VS Code | [Get the theme](https://marketplace.visualstudio.com/items?itemName=suremotoo.protocol-blueprint-light) | **1.1.2** | [vscode/](vscode/) |
 
-Download the platform-specific package from [Releases](https://github.com/Suremotoo/protocol-blueprint-light/releases).
+Updates become available after each marketplace's validation or approval. [Download packages from Releases](https://github.com/Suremotoo/protocol-blueprint-light/releases).
 
-JetBrains Marketplace: [Protocol Blueprint Light](https://plugins.jetbrains.com/plugin/35816-protocol-blueprint-light). First release submitted for moderation on 2026-11-05; public installation becomes available after approval.
+- **IDEA:** Appearance → Theme and Editor → Color Scheme → **Protocol Blueprint Light**. Requires Islands Light / build 253+. Restart after updating. An old editable scheme may retain previous colors; export personal changes before using Restore Defaults to load the new bundled palette.
+- **VS Code:** Preferences: Color Theme → **Protocol Blueprint Light**. Reload Window after updating.
 
-- **IDEA:** Plugins → Install Plugin from Disk → select the IDEA ZIP. Appearance → Theme → **Protocol Blueprint Light**. Editor → Color Scheme → **Protocol Blueprint Light 1.1**. Requires Islands Light / build 253+.
-- **VS Code:** Extensions: Install from VSIX → select the VSIX. Preferences: Color Theme → **Protocol Blueprint Light**.
+## What is different
 
-## Colors
+- Modifiers, return types and method names use distinct amber / blue / violet roles.
+- Consecutive Java modifiers separate without changing the surrounding type or value colors.
+- Blue containers, green generic arguments and slate angle brackets.
+- Blue-gray parameters and package/import paths; readable Git Blame author/date annotations.
+- Complete UI colors alongside editor syntax, with the original light backgrounds retained.
 
-Green keywords, amber strings and numbers, purple methods, blue types, rose parameters, and slate comments. Git Blame has explicit readable foregrounds. See [palette.json](palette.json).
-
-![Before and after color illustration](assets/syntax-and-blame-comparison.png)
-
-This is a palette illustration, not an IDE screenshot. [Design notes](docs/design-notes.md) and [verification scope](docs/VERIFICATION.md) document the implementation and its limits.
+The two platforms have separate manifests and resources. IDEA includes an optional Java annotator; VS Code uses native Java grammar contexts plus a narrow modifier-chain injection. See the platform README files for font overrides and Java color settings.
 
 ## Build
 
-Python 3.9+ builds the IDEA resource plugin without a JDK or Gradle:
+Python 3.9+; IDEA additionally needs a local IDEA SDK with Java support and JDK 21+. VS Code additionally needs Node.js 20+ and npm.
 
 ```sh
-python3 scripts/build.py idea
-```
-
-Node.js 20+ / npm are additionally required for the VS Code package:
-
-```sh
+python3 scripts/build.py idea --idea-home /path/to/idea/Contents
 python3 scripts/build.py vscode
-# or both:
-python3 scripts/build.py all
 ```
 
-Artifacts and SHA-256 checksums are written to `dist/`; generated packages are excluded from Git.
+Packages and checksums are generated in `dist/` and excluded from Git. [Java sample](examples/java/Demo.java) · [Verification](docs/RELEASE-2026-11-06.md).
 
-## License and attribution
+## License
 
-[MIT](LICENSE), Copyright © 2026 Suremotoo. Visual inspiration: Protocol Explorer, credited on the site to DilumSanJaya. Original theme resources; no website illustrations or JetBrains native assets are redistributed. Fantasque Sans Mono is not bundled.
+[MIT](LICENSE), © 2026 Suremotoo. Inspired by [Protocol Explorer](https://protocol-explorer-alpha.vercel.app/), credited to DilumSanJaya. No website artwork, JetBrains native resources or fonts are bundled.

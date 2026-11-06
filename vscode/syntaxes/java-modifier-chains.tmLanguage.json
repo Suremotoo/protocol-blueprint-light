@@ -1,0 +1,84 @@
+{
+  "scopeName": "protocol.java.modifier-chains",
+  "injectionSelector": "L:source.java -comment -string -meta.protocol.modifier-chain.java",
+  "patterns": [
+    {
+      "begin": "(?<=\\bpublic|\\bprotected|\\bprivate|\\bstatic|\\bfinal|\\babstract|\\bnative|\\bsynchronized|\\btransient|\\bvolatile|\\bstrictfp|\\bnon-sealed|\\bsealed|\\bdefault)\\s+",
+      "name": "meta.protocol.modifier-chain.java",
+      "end": "(?=\\S)",
+      "applyEndPatternLast": true,
+      "patterns": [
+        {
+          "include": "#afterAmber"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "afterAmber": {
+      "patterns": [
+        {
+          "match": "\\b(?:public|protected|private|static|final|abstract|native|synchronized|transient|volatile|strictfp|non-sealed|sealed|default)\\b(?=\\s+(?:class|interface|enum|record)\\b)",
+          "name": "storage.modifier.protocol.chain.violet.java"
+        },
+        {
+          "begin": "\\b(?:public|protected|private|static|final|abstract|native|synchronized|transient|volatile|strictfp|non-sealed|sealed|default)\\b",
+          "beginCaptures": {
+            "0": {
+              "name": "storage.modifier.protocol.chain.green.java"
+            }
+          },
+          "end": "(?=\\S)",
+          "applyEndPatternLast": true,
+          "patterns": [
+            {
+              "include": "#afterGreen"
+            }
+          ]
+        }
+      ]
+    },
+    "afterGreen": {
+      "patterns": [
+        {
+          "begin": "\\b(?:public|protected|private|static|final|abstract|native|synchronized|transient|volatile|strictfp|non-sealed|sealed|default)\\b",
+          "beginCaptures": {
+            "0": {
+              "name": "storage.modifier.protocol.chain.violet.java"
+            }
+          },
+          "end": "(?=\\S)",
+          "applyEndPatternLast": true,
+          "patterns": [
+            {
+              "include": "#afterViolet"
+            }
+          ]
+        }
+      ]
+    },
+    "afterViolet": {
+      "patterns": [
+        {
+          "match": "\\b(?:public|protected|private|static|final|abstract|native|synchronized|transient|volatile|strictfp|non-sealed|sealed|default)\\b(?=\\s+(?:class|interface|enum|record)\\b)",
+          "name": "storage.modifier.protocol.chain.amber.java"
+        },
+        {
+          "begin": "\\b(?:public|protected|private|static|final|abstract|native|synchronized|transient|volatile|strictfp|non-sealed|sealed|default)\\b",
+          "beginCaptures": {
+            "0": {
+              "name": "storage.modifier.protocol.chain.green.java"
+            }
+          },
+          "end": "(?=\\S)",
+          "applyEndPatternLast": true,
+          "patterns": [
+            {
+              "include": "#afterGreen"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+id = "protocol-blueprint-light-theme"
+name = "Protocol Blueprint Light"
+version = "1.0.0"
+schema_version = 1
+authors = ["Suremotoo"]
+description = "A light blueprint-inspired theme with pale blue panels, distinct syntax colors, and readable Git annotations."
+repository = "https://github.com/Suremotoo/protocol-blueprint-light"
